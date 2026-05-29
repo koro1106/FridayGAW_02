@@ -1,0 +1,21 @@
+using UnityEngine;
+
+public class GameTimer : MonoBehaviour
+{
+    // InspectorÇ≈ê›íËÇ∑ÇÈ
+    public GameObject gameOverObject;
+
+    void Start()
+    {
+        // ç≈èâÇÕîÒï\é¶
+        gameOverObject.SetActive(false);
+
+        // 10ïbå„Ç…GameOveré¿çs
+        Invoke("ShowGameOver", 10f);
+    }
+
+    void ShowGameOver()
+    {
+        gameOverObject.SetActive(true);
+    }
+}
